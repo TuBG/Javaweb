@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="../img/img.png" name="name" ID="id" class="class">
+    <img src="../img/img.png" name="name" ID="id2" class="class">
+    <div class="div">hehehe</div>
+    <div class="div">hehehe</div>
+</body>
+<!--
+    1.可以通过id获取element元素，返回一个元素对象
+    2.可以通过name,class,标签获取元素，返回一个元素数组
+-->
+<script>
+
+    var id=document.getElementById("id");
+    alert(id);
+    var names=document.getElementsByName("name");
+    for (let i = 0; i < names.length; i++) {
+        alert(names[i]);
+    }
+    var imgs=document.getElementsByClassName("class");
+    for (let i = 0; i < imgs.length; i++) {
+        alert(imgs[i]);
+    }
+    var bqs=document.getElementsByTagName("img");
+    for (let i = 0; i < bqs.length; i++) {
+        alert(imgs[i]);
+    }
+    //通过innerHTML改变内容,style改变样式
+    var divs=document.getElementsByTagName("div");
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].style.color="red";
+        divs[i].innerHTML="ss";
+    }
+</script>
+</html>
